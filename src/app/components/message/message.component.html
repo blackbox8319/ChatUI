@@ -1,0 +1,21 @@
+<div class="flex-1 p-2 my-1 max-w-xs sm:max-w-full relative flex">
+    <span *ngIf="message.isBot" 
+          [ngClass]="{
+              'bg-blue-500 text-white': message.isBot,
+              'bg-gray-300 text-black': !message.isBot
+            }" 
+          class="text-left rounded p-2">
+        {{ message.text }}
+    </span>
+</div>
+
+<div class="flex-1 p-2 my-1 max-w-xs sm:max-w-full relative flex justify-end">
+    <span *ngIf="!message.isBot" 
+          [ngClass]="{
+              'bg-blue-500 text-white': message.isBot,
+              'bg-gray-300 text-black': !message.isBot
+            }" 
+          class="text-right rounded p-2">
+        {{ message.text }}
+    </span>
+</div>
